@@ -5,7 +5,9 @@
 -- create table
     create table tableName;
 -- alter table
-
+        alter table tableName add (coulmnName DataType);
+        alter table tableName drop column nationality;
+        alter table tableName modify country varchar(100);
 -- insert values
     insert into tableName (coulmn1, coulmn2, .... coulmnN) values (value1, value2, ...., valueN);
 -- insert multiple records at a time
