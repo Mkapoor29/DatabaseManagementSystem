@@ -66,3 +66,10 @@ select upper("hello@world");
 -- REVERSE()
 select reverse("hello@world");
 
+
+-- Show the name and the capital where the first letters of each match. Don't include countries where the name and the capital are the same word.
+SELECT name, capital
+FROM world
+where left(name, 1) = left(capital, 1)
+and
+name <> capital;
