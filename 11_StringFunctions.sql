@@ -15,6 +15,11 @@ select char_length(person) from birthchart;
 
 -- LENGTH()
 --  returns the length of a string (in bytes).
+select student_name, length(student_name) from students;
+
+select student_name, length(student_name) from students where student_name like "M%";
+
+SELECT name, capital FROM world WHERE length(name) = length(capital);
 
 -- FORMAT()
 -- formats as number to a format "#, ###, ###.####", roundedd to a speecific number of decimal places, thenit returns the result as a string
