@@ -29,14 +29,35 @@ select insert("example@123", 2, 5, "win");  -- ewine@123
 select insert("123", 4, 5, "win"); -- 123
 select insert("123", 2, 5, "winter"); -- 1winter
 
+-- REPLACE(string, substringToReplace, newString)
+-- is case-sentitive
+select REPLACE("hftftyhtgfyhxsw", "h", "@"); -- @ftfty@tgfy@xsw
+select REPLACE("HftftyhtgHfyhxHsw", "h", "@"); -- Hftfty@tgHfy@xHsw
+
 -- LEFT(string, numberOfChar)
 -- extracts a number of characters from a string (starting from left).
 select left("Miller", 4);
 
--- SUBSTRING()
+-- RIGHT(string, numberOfCharToExtract)
+select right("hello@world", 3); -- rld
 
 
+-- SUBSTRING(string, position, )
+select substring("hello world", 3, 5) as newString;
+
+-- SUBSTRING_INDEX(string, delimiterToSearchFor, numberOfTimesToSearchForDelimiter)
+
+select SUBSTRING_INDEX("hel.lo.wo.rl.d.", ".", 2); -- hel.lo 
+-- +num starts from left
+
+select SUBSTRING_INDEX("hel.lo.wo.r.l.ed.", ".", -2); -- ed.
+-- -ve num starts from right
 
 -- LOWER(), UPPER()
 select lower("HELLO");
 select upper("hello");
+select upper("hello@world");
+
+-- REVERSE()
+select reverse("hello@world");
+
