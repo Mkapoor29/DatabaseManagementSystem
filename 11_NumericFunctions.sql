@@ -29,7 +29,23 @@ select least("w2df", "f45k", "aas");
 select pow(4,2); -- 4 raised to power 2
 
 -- ROUND(number, decimals)
+
+-- round(num, +ve dec) means round after decimal point
 select round(23.90); -- 24
 select round(45.50); -- 46
 select round(45.20); -- 45
 select round(45.5087, 2); -- 45.51
+
+-- round(num, -dec) means round to th eleft of ddecimal point
+
+-- round to nearest tens
+select round(2345, -1); -- 2350
+
+-- round to nearest 100
+select round(2345, -2); -- 2300
+
+-- round to nearest 1000
+select round(2345, -3); -- 2000
+
+-- round to nearest 10000
+select round(2345, -4); -- 0
