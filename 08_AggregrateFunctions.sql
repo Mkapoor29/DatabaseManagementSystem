@@ -33,6 +33,9 @@ select sum(marks) from students1;
 
  select sum(marks), student_name from students1 group by student_name;
 
+--total population of ('Estonia', 'Latvia', 'Lithuania')
+select sum(population) from world where name in ('Estonia', 'Latvia', 'Lithuania');
+
 -- AVG()
 select avg(marks) from students1;
 
