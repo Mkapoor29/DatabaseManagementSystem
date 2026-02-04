@@ -24,3 +24,19 @@ select student_name, round(avg(marks), 2) from students1 group by student_name h
 +-------+-------+--------+
 
 -- dept with total sales over 1500
+select dept, sum(amount) as total_sales from sales group by dept having sum(amount) > 1500;
+
+--  employees have an average sale above 600
+select emp, avg(amount) from sales group by emp having avg(amount) > 600;
+
+-- total number of sales of each dept
+select dept, count(amount) from sales group by dept;
+
+-- dept having more than 2 sales
+select dept, count(amount) from sales group by dept having count(*) >=2;
+
+-- Which employees have total sales above 1000?
+select emp, sum(amount) from sales group by emp having sum(amount) > 1000;
+
+
+-- Show each department and the total sales, but only include departments with total sales greater than 2000.
