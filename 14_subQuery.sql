@@ -130,3 +130,17 @@ select dept from sales
 +-----------------+
 |       2000.0000 |
 +-----------------+
+
+-- Show the name and the population of each country in Europe. Show the population as a percentage of the population of Germany.
+select name, concat(round(population * 100/ (select population from world where name = 'Germany'), 0), '%')
+from world 
+where continent = 'Europe'
+
+-- List the name and continent of countries in the continents containing either Argentina or Australia. Order by name of the country.
+
+select name, continent 
+from world 
+where 
+continent in 
+(select continent from world where name in ('Argentina', 'Australia')) 
+order by name
